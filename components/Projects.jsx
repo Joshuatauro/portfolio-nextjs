@@ -60,7 +60,7 @@ const Project = ({title, desc, skills, githubLink, liveLink, isUnderDevelopment}
             <h1 className="text-lg font-bold text-black dark:text-white">{title}</h1>
           </a>
           <a href={githubLink} target="_blank" rel="noreferrer nofollow">
-            <SiGithub size={20} />
+            <SiGithub size={20} className="text-black dark:text-white" />
           </a>
         </div>
         <p className="text-gray-700 dark:text-gray-400">{desc}</p>
