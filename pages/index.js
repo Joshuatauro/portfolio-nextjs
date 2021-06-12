@@ -10,7 +10,10 @@ import Contact from '../components/Contact'
 export default function Home() {
   
   return (
-    
+    <>
+    <Head>
+      <title>Joshua Tauro | Portfolio</title>
+    </Head>
     <div className="font-inter pt-10 bg-white dark:bg-black duration-700 transition-all">
       <Navbar />
       <Hero />
@@ -19,5 +22,6 @@ export default function Home() {
       <Projects />
       <Contact />
     </div>
+    </>
   )
 }
