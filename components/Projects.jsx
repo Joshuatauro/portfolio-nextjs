@@ -21,6 +21,14 @@ const Projects = () => {
       isUnderDevelopment: true
     },    
     {
+      title: "Tailwindify",
+      desc: "A component library with custom made components ranging from Navbars to Forms to Landing page kits built on top of TailwindCSS which can be used in projects with the help of simple copy-paste, it currently has over 50 components and more that are on the way ",
+      skills: ['TailwindCSS', 'NextJs'],
+      liveLink: "https://andha-app.herokuapp.com",
+      githubLink: "https://github.com/joshuatauro/tailwindify",
+      isUnderDevelopment: true
+    },
+    {
       title: "TH",
       desc: "A fullstack ecommerce app with all major ecommerce features such as viewing different items and details related to them, adding items to cart as well as to wishlist, users can also place orders and check the status of the delivery in the settings tab",
       skills: ['SCSS', 'Express', 'MongoDB', 'React'],
@@ -28,14 +36,7 @@ const Projects = () => {
       githubLink: "https://github.com/Joshuatauro/MERN-ecommerce",
       isUnderDevelopment: true
     },
-    {
-      title: "JobTrackr",
-      desc: "A fullstack job tracking app to help users track their numbers related to the job hunt such as OA's done, Interviews attended and job offer's received, can also keep track of job status and where they are in the process with a company",
-      skills: ['TailwindCSS', 'Firebase', 'React'],
-      liveLink: "https://andha-app.herokuapp.com",
-      githubLink: "https://github.com/joshuatauro/jobtrackr",
-      isUnderDevelopment: true
-    },
+    
   ]
 
   return (

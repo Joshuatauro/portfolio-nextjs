@@ -21,6 +21,9 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <section className=" w-10/12 md:w-6/12 m-auto text-black dark:text-white pb-5">
+        Built with 💖 by <a href="https://github.com/joshuatauro" target="_blank" className="text-blue-600 dark:text-blue-400 underline">Joshua</a> using <a href="https://nextjs.org" target="_blank" className="text-blue-600 dark:text-blue-400 underline">NextJs</a> and <a href="https://tailwindcss.com" target="_blank" className="text-blue-600 dark:text-blue-400 underline">TailwindCSS</a>
+      </section>
     </div>
     </>
   )

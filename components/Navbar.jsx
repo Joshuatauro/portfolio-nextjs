@@ -30,8 +30,8 @@ const Navbar = () => {
   }
   
   return (
-    <nav className="w-full font-inter sticky top-0 duration-700 transition-all ">
-      <div className="m-auto w-10/12 md:w-8/12 py-6 bg-white dark:bg-black my-5 duration-700 transition-all  flex justify-between">
+    <nav className="w-full font-inter sticky top-0 duration-700 transition-all bg-white dark:bg-black ">
+      <div className="m-auto w-10/12 md:w-8/12 py-6  my-5 duration-700 transition-all  flex justify-between">
         <button className="px-3 py-3 rounded-sm bg-gray-300 dark:bg-gray-800 dark:text-white focus:outline-none" onClick={togglePreference} ><BsMoon /></button>
         <ul className="flex items-center">
           <li className="mx-2 font-normal text-gray-600 dark:text-gray-200">
