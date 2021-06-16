@@ -24,9 +24,9 @@ const Projects = () => {
       title: "Tailwindify",
       desc: "A component library with custom made components ranging from Navbars to Forms to Landing page kits built on top of TailwindCSS which can be used in projects with the help of simple copy-paste, it currently has over 50 components and more that are on the way ",
       skills: ['TailwindCSS', 'NextJs'],
-      liveLink: "https://andha-app.herokuapp.com",
+      liveLink: "https://tailwindify.vercel.app",
       githubLink: "https://github.com/joshuatauro/tailwindify",
-      isUnderDevelopment: true
+      isUnderDevelopment: false
     },
     {
       title: "TH",
