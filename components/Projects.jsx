@@ -22,7 +22,7 @@ const Projects = () => {
     },    
     {
       title: "Tailwindify",
-      desc: "A component library with custom made components ranging from Navbars to Forms to Landing page kits built on top of TailwindCSS which can be used in projects with the help of simple copy-paste, it currently has over 50 components and more that are on the way ",
+      desc: "A component library with custom made components ranging from Navbars to Forms to Landing page kits built on top of TailwindCSS which can be used in projects with the help of simple copy-paste, it currently is in development but new components are being added daily",
       skills: ['TailwindCSS', 'NextJs'],
       liveLink: "https://tailwindify.vercel.app",
       githubLink: "https://github.com/joshuatauro/tailwindify",
@@ -43,7 +43,7 @@ const Projects = () => {
     <section id="projects" className="w-full pt-20 ">
       <div className="w-10/12 md:w-6/12 m-auto">
         <h1 className="text-4xl text-black font-bold dark:text-white">Projects</h1>
-        <p className="mt-2 text-gray-700 dark:text-gray-400">These are few of my recent projects that i've worked on, some might be under development right now 😅. You can check all my projects at my <a href="https://github.com/joshuatauro" target="_blank" rel="noreferrer nofollow" className="text-blue-600 dark:text-blue-400">Github</a></p>
+        <p className="mt-2 text-gray-700 dark:text-gray-400">These are few of my recent projects that i've worked on, some might be under development right now 😅. You can check all my projects at my <a href="https://github.com/joshuatauro" target="_blank" rel="noreferrer nofollow" className="text-blue-600 dark:text-blue-400 underline">Github</a>.</p>
         {
           projects.map(({isUnderDevelopment, title, desc, skills, githubLink, liveLink}) => <Project title={title} desc={desc} githubLink={githubLink} skills={skills} liveLink={liveLink} isUnderDevelopment={isUnderDevelopment} />)
         }
@@ -54,8 +54,8 @@ const Projects = () => {
 
 const Project = ({title, desc, skills, githubLink, liveLink, isUnderDevelopment}) => {
   return(
-    <article className="w-full border border-gray-300 rounded-md shadow-sm  duration-300 transition-all my-4">
-      <div className="w-11/12 py-2 m-auto">
+    <div className="w-full border border-gray-300 rounded-md shadow-sm  duration-300 transition-all my-4">
+      <div className="w-11/12 pt-4 m-auto">
         <div className="flex justify-between items-center">
           <a href={isUnderDevelopment ? githubLink : liveLink} target="_blank" rel="noreferrer nofollow">
             <h1 className="text-lg font-bold text-black dark:text-white">{title}</h1>
@@ -65,13 +65,13 @@ const Project = ({title, desc, skills, githubLink, liveLink, isUnderDevelopment}
           </a>
         </div>
         <p className="text-gray-700 dark:text-gray-400">{desc}</p>
-        <div className="hidden md:flex flex-row-reverse w-full mt-1">
+        <div className="hidden md:flex flex-row-reverse w-full pb-2">
         {
-          skills.map(skill => <h2 className="ml-2 text-sm text-blue-600 dark:text-blue-400">{skill}</h2>)
+          skills.map(skill => <span className="ml-2 text-sm text-indigo-600 dark:text-indigo-400">{skill}</span>)
         }
         </div>
       </div>
-    </article>
+    </div>
   )
 }
 
