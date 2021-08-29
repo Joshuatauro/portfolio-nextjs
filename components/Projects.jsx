@@ -1,5 +1,6 @@
 import React from 'react'
 import { SiGithub } from 'react-icons/si'
+import Badge from './Badge'
 
 const Projects = () => {
 
@@ -13,28 +14,28 @@ const Projects = () => {
       isUnderDevelopment: false
     },
     {
-      title: "Devstagram",
-      desc: "A full stack social media app where users can share posts as well as leave comments and like other poeple's post, users can also see other users profile and follow various different subreddits      ",
-      skills: ['SCSS', 'Express', 'PostgreSQL', 'React'],
+      title: "Alpha",
+      desc: "A fullstack ecommerce store meant for gaming accessories. Has features ranging from viewing, filtering multiple products based on certain parameters, ordering/adding products to wishlist. Users have ability to leave reviews for products they have ordered, view previous orders and add multiple address/card details.",
+      skills: ['TailwindCSS', 'Express', 'PostgreSQL', 'React'],
       liveLink: "https://andha-app.herokuapp.com",
-      githubLink: "https://github.com/joshuatauro/devstagram-client",
+      githubLink: "https://github.com/Joshuatauro/alpha-store",
       isUnderDevelopment: true
     },    
     {
+      title: "AlphaAdmin",
+      desc: "A full fledged ecommerce admin dashboard, which provides the latest statistics on how Alpha is doing like Total orders, New signups, Total Profit. Also features various other functionalities such as the ability to add/edit products, add new users/give admin role to new users, handle delivery status of orders and so much more.",
+      skills: ['TailwindCSS', 'NextJS'],
+      liveLink: "",
+      githubLink: "https://github.com/Joshuatauro/admin-dashboard",
+      isUnderDevelopment: true
+    },
+    {
       title: "Tailwindify",
       desc: "A component library with custom made components ranging from Navbars to Forms to Landing page kits built on top of TailwindCSS which can be used in projects with the help of simple copy-paste, it currently is in development but new components are being added daily",
-      skills: ['TailwindCSS', 'NextJs'],
+      skills: ['TailwindCSS', 'NextJS'],
       liveLink: "https://tailwindify.vercel.app",
       githubLink: "https://github.com/joshuatauro/tailwindify",
       isUnderDevelopment: false
-    },
-    {
-      title: "TH",
-      desc: "A fullstack ecommerce app with all major ecommerce features such as viewing different items and details related to them, adding items to cart as well as to wishlist, users can also place orders and check the status of the delivery in the settings tab",
-      skills: ['SCSS', 'Express', 'MongoDB', 'React'],
-      liveLink: "https://andha-app.herokuapp.com",
-      githubLink: "https://github.com/Joshuatauro/MERN-ecommerce",
-      isUnderDevelopment: true
     },
     
   ]
@@ -56,15 +57,29 @@ const Project = ({title, desc, skills, githubLink, liveLink, isUnderDevelopment}
   return(
     <div className="w-full border border-gray-300 rounded-md shadow-sm  duration-300 transition-all my-4">
       <div className="w-11/12 pt-4 m-auto">
-        <div className="flex justify-between items-center">
-          <a href={isUnderDevelopment ? githubLink : liveLink} target="_blank" rel="noreferrer nofollow">
-            <h1 className="text-lg font-bold text-black dark:text-white">{title}</h1>
-          </a>
+        <div className="flex justify-between items-center mb-1">
+          <div className="flex items-center">
+          {
+            isUnderDevelopment ? (
+                <h1 className="text-lg font-medium text-black dark:text-white">{title}</h1>
+            ) : (
+              <a href={liveLink} target="_blank" rel="noreferrer nofollow text-blue-600">
+                <h1 className="text-lg  text-blue-600 dark:text-blue-400 underline">{title}</h1>
+              </a>
+            )
+          }
+          
+          {
+            isUnderDevelopment && (
+              <Badge underDevelopment={isUnderDevelopment} />
+            )
+          }
+          </div>
           <a href={githubLink} target="_blank" rel="noreferrer nofollow">
             <SiGithub size={20} className="text-black dark:text-white" />
           </a>
         </div>
-        <p className="text-gray-700 dark:text-gray-400">{desc}</p>
+        <p className="text-gray-700 mb-4 md:mb-0 dark:text-gray-400">{desc}</p>
         <div className="hidden md:flex flex-row-reverse w-full pb-2">
         {
           skills.map(skill => <span className="ml-2 text-sm text-indigo-600 dark:text-indigo-400">{skill}</span>)
