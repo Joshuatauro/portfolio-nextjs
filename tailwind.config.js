@@ -5,6 +5,11 @@ module.exports = {
       fontFamily: {
         inter: ['inter']
     },
+    extend: {
+      colors: {
+        'black-primary': '#111111',
+      }
+    }
   },
   variants: {
     extend: {

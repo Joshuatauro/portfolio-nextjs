@@ -14,7 +14,7 @@ export default function Home() {
     <Head>
       <title>Joshua Tauro | Portfolio</title>
     </Head>
-    <div className="font-inter pt-10 bg-white dark:bg-black duration-700 transition-all">
+    <div className="font-inter pt-10 bg-white dark:bg-black-primary duration-700 transition-all">
       <Navbar />
       <Hero />
       <About />

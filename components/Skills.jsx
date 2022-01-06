@@ -7,47 +7,47 @@ const Skills = () => {
 
   const skills = [
     {
-      icon: <FaReact  />,
-      name: "React"
+      icon: <FaReact color={"#5ED3F3"} />,
+      name: "React",
     },
     {
-      icon: <IoLogoJavascript />,
+      icon: <IoLogoJavascript color={"#EFD81D"} />,
       name: "Javascript"
     },    
     {
-      icon: <FaHtml5 />,
+      icon: <FaHtml5 color={"#DD4B25"} />,
       name: "HTML"
     },   
     {
-      icon: <FaCss3 />,
+      icon: <FaCss3 color={"#254BDD"} />,
       name: "CSS"
     },    
     {
-      icon: <SiFirebase />,
+      icon: <SiFirebase color={"#FFCB2B"} />,
       name: "Firebase"
     },    
     {
-      icon: <FaNodeJs />,
+      icon: <FaNodeJs color={"#79AE60"} />,
       name: "NodeJS"
     },    
     {
-      icon: <SiPostgresql />,
+      icon: <SiPostgresql color={"#336791"} />,
       name: "PostgreSQL"
     },  
     {
-      icon: <SiMysql />,
+      icon: <SiMysql color={"#F79F12"} />,
       name: "MySQL"
     }, 
     {
-      icon: <SiMongodb />,
+      icon: <SiMongodb color={"#429543"} />,
       name: "MongoDB"
     },    
     {
-      icon: <SiSass />,
+      icon: <SiSass color={"#C76494"} />,
       name: "SCSS"
     },   
     {
-      icon: <SiTailwindcss />,
+      icon: <SiTailwindcss color={"#38BDF8"} />,
       name: "TailwindCSS"
     }
   ]
@@ -59,7 +59,7 @@ const Skills = () => {
         <p className="mt-2 text-gray-700 dark:text-gray-400">These are some of the technologies I work with 🚀</p>
         <ul className="flex flex-wrap mt-2">
           {
-            skills.map(({name, icon}) => <Skill name={name} icon={icon} />)
+            skills.map(({name, icon, color}) => <Skill name={name} icon={icon} />)
           }
         </ul>
       </div>
